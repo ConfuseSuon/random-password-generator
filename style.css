@@ -1,0 +1,155 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #4285F4;
+}
+
+.container{
+    width: 450px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.container h2{
+    font-size: 1.31rem;
+    font-weight: 600;
+    padding: 1rem 1.17rem;
+    border-bottom: .1rem solid #4285F4;
+}
+
+.wrapper{
+    margin: 1.25rem 1.75rem;
+}
+
+.wrapper .input-box{
+    position: relative;
+}
+.input-box input{
+    width: 100%;
+    height: 53px;
+    font-size: 1.06rem;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    border: .1rem solid #aaa;
+    border-radius: 4px;
+    padding: 0 2.85rem 0 1rem;
+    background: none;
+    color: black;
+}
+
+.input-box span{
+    position: absolute;
+    right: 33px;
+    line-height: 53px;
+    color: #7a7a7a;
+    cursor: pointer;
+}
+
+.wrapper .pass-indicator{
+    width: 100%;
+    background: #dfdfdf;
+    height: 4px;
+    border-radius: 25px;
+    margin-top: 0.75rem;
+    position: relative;
+}
+
+.pass-indicator::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    background: #f1c80b;
+    border-radius: inherit;
+    transition: width 0.3s ease;
+}
+
+.pass-indicator#weak::before{
+    width: 20%;
+    background: #E64A4A;
+}
+
+.pass-indicator#medium::before{
+    width: 50%;
+    background: #f1c80b;
+}
+
+.pass-indicator#strong::before{
+    width: 100%;
+    background: #4285F4;
+}
+
+
+.wrapper .pass-length{
+    margin: 1.56rem 0 1.25rem;
+}
+
+.wrapper .details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pass-length input{
+    height: 5px;
+    width: 100%;
+}
+
+.pass-setting .options{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.pass-setting .options .option{
+    display: flex;
+    align-items: center;
+    width: calc(100% / 2);
+    margin-bottom: 1rem;
+}
+
+.options .option:first-child{
+    pointer-events: none;
+}
+
+.options .option:first-child input{
+    opacity: 0.7;
+}
+
+.option input{
+    
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+
+.option label{
+    padding-left: 0.63rem;
+    cursor: pointer;
+}
+
+.wrapper .generate-btn{
+    width: 100%;
+    padding: 0.94rem 0;
+    font-size: 1.06rem;
+    margin: 0.94rem 0 1.3rem;
+    background: #4285F4;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
